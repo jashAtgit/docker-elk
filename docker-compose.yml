@@ -98,6 +98,20 @@ services:
       - elasticsearch
     restart: unless-stopped
 
+
+  # nginx-proxy:
+  #   build: nginx
+  #   container_name: nginx-proxy
+  #   restart: always
+  #   ports:
+  #     - 443:443
+  #     - 80:80
+  #   volumes:
+  #     - certs:/etc/nginx/certs/
+  #     - html:/usr/share/nginx/html/
+  #     - vhost:/etc/nginx/vhost.d/
+  #     - /var/run/docker.sock:/tmp/docker.sock:ro
+
 networks:
   elk:
     driver: bridge
